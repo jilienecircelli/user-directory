@@ -1,14 +1,21 @@
-import React from "react";
-import Form from "react-bootstrap/Form";
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
+import React from "react"
+// import "./styles.css"
 
-function SearchBar() {
+function SearchBar(props) {
+    return (
+        <div className="searchbox" >
+            <form className="form-inline">
+                <input
+                    className="form-control"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                    onChange={props.onChange}
+                />
+            </form>
+        </div>
+    );
 
-    <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        <Button variant="outline-success">Search</Button>
-    </Form>
 }
 
 export default SearchBar
